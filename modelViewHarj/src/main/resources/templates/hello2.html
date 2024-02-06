@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hello2</title>
+</head>
+
+<body>
+	<table>
+		<tr th:text="${welcomeMessage}"></tr>
+		<tr th:each="student : ${students}">
+			<td th:text="${student.firstName + ' ' + student.lastName}"></td>
+		</tr>
+	</table>
+	
+	<!-- 
+		 
+	<p th:text="${welcomeMessage}"></p>
+	<ul>
+		<li th:each="student : ${students}" th:text="${student.firstName + ' ' + student.lastName}"></li>
+	</ul>
+
+	<p th:text="${welcomeMessage}"></p>
+	<p th:each="student : ${students}" th:text="${student.firstName + ' ' + student.lastName}"></p>
+	
+	-->
+	
+
+
+</body>
+
+</html>
